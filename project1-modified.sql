@@ -236,3 +236,55 @@ VALUES
 
 select*from book1
 
+SELECT l.LibraryName, lo.loc AS Location
+FROM library1 l
+JOIN location1 lo
+ON l.ID = lo.IDLibrary;
+
+SELECT title, gender, price
+FROM book1;
+
+SELECT Fname, email
+FROM members1;
+
+SELECT ID, Fname, position
+FROM staff1;
+
+SELECT *
+FROM book1
+WHERE gender = 'Fiction';
+
+SELECT l.LibraryName, lo.loc
+FROM library1 l
+JOIN location1 lo
+ON l.ID = lo.IDLibrary
+WHERE lo.loc = 'New York';
+
+SELECT *
+FROM book1
+WHERE AvaiStatus = 'CheckedOut';
+
+SELECT *
+FROM staff1
+WHERE position = 'Librarian';
+
+SELECT *
+FROM loan1
+WHERE loanStatus LIKE 'Overdue%';
+
+
+SELECT *
+FROM book1
+WHERE price > 20;
+
+SELECT *
+FROM library1
+WHERE EstablishYear < 2000;
+
+SELECT *
+FROM payment1
+WHERE Amount >= 10;
+
+SELECT *
+FROM book1
+WHERE price <= 15;
