@@ -288,3 +288,38 @@ WHERE Amount >= 10;
 SELECT *
 FROM book1
 WHERE price <= 15;
+
+SELECT *
+FROM book1
+WHERE gender = 'Fiction'
+  AND AvaiStatus <> 'CheckedOut';
+
+  SELECT *
+FROM book1
+WHERE gender = 'Fiction'
+   OR gender = 'Children';
+
+SELECT l.LibraryName, l.EstablishYear, lo.loc
+FROM library1 l
+JOIN location1 lo
+ON l.ID = lo.IDLibrary
+WHERE l.EstablishYear > 2010
+  AND lo.loc = 'California';
+
+SELECT *
+FROM book1
+WHERE price>=10
+AND price<=30
+
+
+SELECT *
+FROM book1
+ORDER BY title ASC;
+
+SELECT *
+FROM book1
+ORDER BY price DESC;
+
+
+
+
